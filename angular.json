@@ -115,6 +115,31 @@
           }
         }
       }
+    },
+    "ngrxlib": {
+      "projectType": "library",
+      "root": "libs/ngrxlib",
+      "sourceRoot": "libs/ngrxlib/src",
+      "prefix": "marbletests",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ngrxlib"],
+          "options": {
+            "jestConfig": "libs/ngrxlib/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ngrxlib/src/**/*.ts",
+              "libs/ngrxlib/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

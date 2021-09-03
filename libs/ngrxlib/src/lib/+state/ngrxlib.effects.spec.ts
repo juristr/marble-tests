@@ -46,7 +46,7 @@ describe('NgrxlibEffects', () => {
       });
 
       const expected = hot('-a|', {
-        a: NgrxlibActions.someTestSuccess({ message: 'all good!' }),
+        a: NgrxlibActions.someTestSuccess({ message: expect.any(String) }),
       });
 
       // assert
